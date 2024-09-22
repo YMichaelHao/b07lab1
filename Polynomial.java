@@ -29,24 +29,14 @@ public class Polynomial {
         double tmp = 1;
         double total = 0;
         for(int i=0; i<this.co.length; i++) {
-            for (int j=0; j<i; j++) {
+            if (i > 0) {
                 tmp = tmp*x;
             }
             total += this.co[i]*tmp;
-            tmp = 1;
         }
         return total;
     }
     public boolean hasRoot(double x) {
-        double tmp = 1;
-        double total = 0;
-        for(int i=0; i<this.co.length; i++) {
-            for (int j=0; j<i; j++) {
-                tmp = tmp*x;
-            }
-            total += this.co[i]*tmp;
-            tmp = 1;
-        }
-        return total == 0;
+        return this.evaluate(x) == 0;
     }
 }
