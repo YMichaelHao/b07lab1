@@ -75,7 +75,7 @@ public class Polynomial {
             exp[0] = 0;
         }
         
-        scanner.close();  // Close the scanner after reading the file
+        scanner.close();
     }
     public void saveToFile(String f) throws IOException {
         FileWriter writer = new FileWriter(f);
